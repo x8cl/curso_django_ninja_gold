@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Ninja Gold - You Won!!!{% endblock %}
+{% block header %}
+<h2 class="text-light">You Lost :(</h2>
+{% endblock %}
+{% block subheader %}
+<h3 class="text-warning">{{ request.session.gold }} golds in {{ request.session.count }} attempts</h3>
+{% endblock %}
+{% block content %}
+<a href="{% url 'gold:reset' %}" class="btn btn-light">Play Again</a>
+{% endblock %}
